@@ -29,6 +29,7 @@ var defaultProps = {
     swipeToSlide: false,
     touchMove: true,
     touchThreshold: 5,
+    touchGap: 20,
     useCSS: true,
     variableWidth: false,
     vertical: false,

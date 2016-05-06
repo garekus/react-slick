@@ -79,6 +79,11 @@ var EventHandlers = {
       trackRef: this.refs.track
     }, this.props, this.state));
     touchObject.curX = (e.touches) ? e.touches[0].pageX : e.clientX;
+
+    if(Math.abs(touchObject.curX - touchObject.startX) < this.props.touchGap) {
+      return;
+    }
+
     touchObject.curY = (e.touches) ? e.touches[0].pageY : e.clientY;
     touchObject.swipeLength = Math.round(Math.sqrt(Math.pow(touchObject.curX - touchObject.startX, 2)));
 
